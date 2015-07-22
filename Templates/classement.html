@@ -1,0 +1,31 @@
+		<div id="content">
+            <div class="container">
+            	<div class="row">
+                    <div class="col-xs-12">
+						<div class="table-responsive">
+                            <table class="table">
+                            	<tr>
+                            		<th>Nom du joueur</th>
+                            		<th>Nombre de partie terminée</th>
+                            		<th>Nombre de partie gagnée</th>
+                            		<th>% de réussite</th>
+                            	</tr>
+                            	<!-- BEGIN joueurs -->
+                                <tr>
+                                    <td>
+                                    	<div class="user_picto" style="background-color:{joueurs.couleur_hexa}">
+                                    		<i class="fa fa-user"></i>
+                                    	</div>
+                                    	{joueurs.user_pseudo}
+                                    </td>
+                                    <td>{joueurs.user_nb_partie}</td>
+                                    <td>{joueurs.user_nb_gagne}</td>
+                                    <td>{joueurs.user_pourcent}</td>
+                                </tr>
+					 			<!-- END joueurs -->
+					 		</table>
+					 	</div>
+					</div>
+                </div>
+            </div>
+        </div>

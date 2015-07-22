@@ -1,0 +1,40 @@
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script
+			src="../Ressources/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script
+			src="../Ressources/bootstrap.min.js"></script>
+		
+		<!-- BEGIN partie -->
+		<script type="text/javascript">
+		var geekJouer;
+		var maxCase;
+		var maxNum;
+		var partieId;
+		
+        $(document).ready(function() {
+				geekJouer = '{partie.geek_joueur}';
+	    		maxCase = {partie.type_case};
+	    		maxNum = {partie.type_num};
+	    		partieId = {partie.partie_id};
+	    		
+	    		$('#{partie.positionB}').append(
+				'<div class="geek {partie.classeB}" id="geekB"></div>');
+				$('#{partie.positionJ}').append(
+							'<div class="geek {partie.classeJ}" id="geekJ"></div>');
+				$('#{partie.positionV}').append(
+							'<div class="geek {partie.classeV}" id="geekV"></div>');
+				$('#{partie.positionR}').append(
+				'<div class="geek {partie.classeR}" id="geekR"></div>');
+				
+				$('.geek').each
+	    });
+        </script>
+        <!-- END partie -->
+        
+        <script src="../Ressources/script.js"></script>
+	
+	</body>
+</html>

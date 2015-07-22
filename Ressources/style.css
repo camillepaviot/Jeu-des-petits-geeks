@@ -1,0 +1,401 @@
+/* <><><><><><><><><><><><><><><><> GLOBAL <><><><><><><><><><><><><><><><> */ 
+
+body {
+	background: #f3f2f0;
+	margin:0;
+	font-family: "Open Sans",Helvetica,Arial,sans-serif;
+}
+
+a{
+	color:#50b06d;
+	text-decoration:none;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+a:focus {
+	text-decoration: none;
+}
+
+a:hover, a:focus{
+	outline: 0;
+}
+
+
+.clean {
+   clear: both;
+   font-size: 0;
+   height: 0;
+   line-height: 0;
+   margin: 0;
+   padding: 0;
+}
+
+h1 {
+	font-size: 25px;
+	font-weight: normal;
+	color:#000000;
+}
+h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color:#000000;
+}
+
+.container{
+	width: 970px !important;
+}
+
+.modal .modal-header {
+	background: #000000;
+	text-align: center;
+}
+.modal .modal-header h1 {
+	color:#fff;
+	margin-top:0;
+}
+.modal-body .btn{
+	margin-bottom: 20px;
+}
+.modal .modal-header h1 i{
+	background: none repeat scroll 0 0 #ffffff;
+    border-radius: 50%;
+    color: #000000;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    width: 50px;
+    behavior: url(theme/294/pie/PIE.htc);
+    font-size: 25px;
+}
+
+.bleu{
+	background-color: #48b9c7;
+}
+.jaune{
+	background-color: #fcb515;
+}
+.vert{
+	background-color: #57bc74;
+}
+.rouge{
+	background-color: #ee3124;
+}
+
+
+/* <><><><><><><><><><><><><><><><> HEADER <><><><><><><><><><><><><><><><> */ 
+#user_menu {
+	padding: 12px 0 5px 0
+}
+#logo {
+	text-align: center;
+	margin-bottom: 30px;
+}
+#logo img {
+	margin-bottom: 20px;
+}
+#logo a {
+	color:#acb3b9;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+/* <><><><><><><><><><><><><><><><> MENU <><><><><><><><><><><><><><><><> */ 
+#menu .collapse{
+	display:block;
+}
+#menu .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+#menu .navbar-collapse{
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e2e2e2;
+	padding-top: 20px;
+}
+#menu dt {
+	float: left;
+	margin: 0;
+	border-right: 1px solid #000000;
+	margin-top: 78px;
+}
+#menu dt:last-child{
+	float: right;
+	border: none;
+}
+#menu dt:first-child{
+	border: none;
+	margin-top: 0px;
+}
+
+#menu dt a {
+	color:#000000;
+	display: block;
+	padding-right: 14px;
+	padding-left: 14px;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+#menu dt a:hover, #menu dt a.current{
+	color: #5e5e5e;
+	text-decoration: none;
+}
+
+
+/* <><><><><><><><><><><><><><><><> COMPTE <><><><><><><><><><><><><><><><> */ 
+.btn-compte{
+	margin-bottom: 15px;
+	width:100%;
+}
+.btn-compte i{
+	margin-right: 5px;
+}
+
+
+/* <><><><><><><><><><><><><><><><> CONTENT <><><><><><><><><><><><><><><><> */ 
+#content .container {
+	padding-top: 30px;
+	padding-bottom: 60px;
+	min-height: 800px;
+}
+
+
+/* <><><><><><><><><><><><><><><><> FOOTER <><><><><><><><><><><><><><><><> */ 
+
+#footer{
+	background: #2a2a2a;
+	padding: 25px 0;
+}
+
+#footer i{
+	font-size: 25px;
+	color:#000000;
+	display: block;
+	width: 58px;
+	height:58px;
+	border-radius: 50%;
+	text-align: center;
+	background: #fff;
+	line-height: 58px;
+	margin: auto;
+	text-shadow:2px 2px 2px #ccc;
+	behavior: url(theme/294/pie/PIE.htc);
+}
+
+#footer h2 {
+	font-size: 16px;
+	color:#ffffff;
+}
+
+#footer ul {
+	float: right;
+	padding: 0;
+	margin: 0;
+}
+
+#footer li {
+	list-style: none;
+	float: left;
+}
+
+#footer a {
+	margin-right: 14px;
+	color:#fff;
+	line-height: 45px;
+	height: 45px;
+	display: block;
+	padding-right: 14px;
+	padding-left: 14px;
+	font-weight: 600;
+}
+
+#footer a:hover {
+	background: #304659;
+	text-decoration: none;
+}
+
+
+/* <><><><><><><><><><><><><><><><> PLATEAU <><><><><><><><><><><><><><><><> */ 
+#modal_de{
+	text-align: center;
+}
+body.modal-de-open {
+    overflow-y: auto;
+    margin-right: -15px;
+}
+#modal_de #de{
+	font-size: 100px;
+	line-height: 150px;
+}
+#modal_de .modal-dialog{
+	margin-left: 20px;
+}
+#modal_de .modal-content{
+	width: 300px;
+}
+#modal_de h1 {
+  font-size: 20px;
+}
+
+.plateau>tbody>tr>td{
+border: none;
+}
+
+.plateau .depart{
+	width: 357px;
+	height: 357px;
+	position: relative;
+	color: #FFFFFF;
+	font-size: 30px;
+	padding: 10px;
+	text-align: center;
+}
+.plateau.medium .depart{
+	width: 240px;
+	height: 240px;
+}
+.plateau.little .depart{
+	width: 108px;
+    height: 108px;
+    font-size: 20px;
+	padding: 10px;
+}
+.plateau .arrivee{
+	background-color: #000000;
+}
+
+.plateau .case{
+	border-radius: 47px;
+	width: 46px;
+	height: 46px;
+	line-height: 46px;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	position: relative;
+}
+.plateau .case.num{
+	border-radius: 0px;
+}
+
+.plateau .rouge .fa-reply{
+	-ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+.plateau .bleu .fa-reply{
+	-ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+.plateau .jaune .fa-reply{
+	-ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+}
+
+.plateau .geek{
+	background-repeat: no-repeat;
+    height: 49px;
+    width: 49px;
+    background-size: 49px 49px;
+    z-index: 999;
+    position: absolute;
+    top: -11px;
+    left: -2px;
+}
+.plateau #geekB{
+	background-image: url('geekB.png')
+}
+.plateau #geekJ{
+	background-image: url('geekJ.png')
+}
+.plateau #geekV{
+	background-image: url('geekV.png')
+}
+.plateau #geekR{
+	background-image: url('geekR.png')
+}
+.plateau .depart .geek{
+    position: absolute;
+    top: 280px;
+    left: 150px;
+}
+.plateau.medium .depart .geek{
+    position: absolute;
+    top: 170px;
+  	left: 94px;
+}
+.plateau.little .depart .geek{
+    position: absolute;
+    top: 55px;
+    left: 28px;
+}
+
+/* <><><><><><><><><><><><><><><><> LISTE DES PARTIES <><><><><><><><><><><><><><><><> */ 
+.table th{
+	background-color: #48b9c7;
+	color: #ffffff;
+}
+
+
+/* <><><><><><><><><><><><><><><><> MODAL NOUVELLE PARTIE <><><><><><><><><><><><><><><><> */ 
+#modal_partie .choix_couleur input, #modal_partie .choix_taille input{
+	float: left;
+}
+#modal_partie .choix_couleur div{
+	float: right;
+	width: 250px;
+	color: #ffffff;
+  	text-align: center;
+  	margin-bottom: 15px;
+  	cursor: pointer;
+}
+
+#modal_partie .choix_taille div{
+	float: left;
+	color: #ffffff;
+	background-color: #000000;
+  	text-align: center;
+  	margin-bottom: 15px;
+  	cursor: pointer;
+  	margin-left: 5px;
+}
+#modal_partie .choix_taille:nth-child(1) div{
+	width: 50px;
+}
+#modal_partie .choix_taille:nth-child(2) div{
+	width: 100px;
+}
+#modal_partie .choix_taille:nth-child(3) div{
+	width: 150px;
+}
+
+.user_picto{
+	height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 33px;
+    font-size: 20px;
+    float: left;
+    margin-right: 20px;
+}
+
+
+#user_couleur input{
+	float: left;
+	margin-right: 5px
+}
+#user_couleur .compte_couleur{
+	height: 15px;
+	width: 15px;
+	float: left;
+	margin-right: 15px;
+	cursor: pointer;
+}

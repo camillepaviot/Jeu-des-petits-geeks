@@ -1,0 +1,54 @@
+		<div id="content">
+            <div class="container">
+            	<div class="row">
+            		<div class="col-xs-12">
+            		<span>nombre de partie jouée : <b>{partie_jouee}</b></span><br/>
+            		<span>nombre de partie terminée : <b>{partie_finie}</b></span><br/>
+            		<span>pourcentage de réussite : <b>{pourcentage} %</b></span><br/>
+            		<br class="clean"/>
+            		</div>
+                    <div class="col-xs-12">
+						<div class="table-responsive">
+                            <table class="table">
+                            	<tr>
+                            		<th>Votre geek</th>
+                            		<th>Type de plateau</th>
+                            		<th>Status</th>
+                            		<th>Action</th>
+                            	</tr>
+                            	<!-- BEGIN parties -->
+                                <tr>
+                                    <td>{parties.couleur_desc}</td>
+                                    <td>{parties.type_desc}</td>
+                                    <td>
+	                                    <!-- BEGIN commence -->
+	                                    Partie crée
+	                                    <!-- END commence -->
+	                                  
+	                                    <!-- BEGIN encours -->
+	                                    Partie sauvegardée
+	                         			<!-- END encours -->
+	                                    
+	                                    <!-- BEGIN fini -->
+	                                    Partie terminée
+	                                    <br/>
+	                                    Vous avez {parties.fini.score} cette partie
+	                                    <!-- END fini -->
+                                    </td>
+                                    <td>
+	                                    <!-- BEGIN commence -->
+	                                    <a href="../PHP/partie.php?partie={parties.partie_id}" class="btn btn-default">Commencer</a>
+	                                    <!-- END commence -->
+	                                  
+	                                    <!-- BEGIN encours -->
+	                                    <a href="../PHP/partie.php?partie={parties.partie_id}" class="btn btn-default">Reprendre</a>
+	                                    <!-- END encours -->
+                                    </td>
+                                </tr>
+					 			<!-- END parties -->
+					 		</table>
+					 	</div>
+					</div>
+                </div>
+            </div>
+        </div>

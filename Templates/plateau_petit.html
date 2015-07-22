@@ -1,0 +1,201 @@
+        
+        <div class="modal fade" id="modal_de" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1><i class="fa fa-cube"></i><br/>Lancer de dé</h1>
+                </div>
+                <div class="modal-body">
+                    <h1></h1>
+                    <a href="" class="btn btn-default" onclick="lancerDe(); return false" id="btn_de">Lancer le dé</a>
+                    <span id="de"></span>
+                    <br class="clean"/>
+                    <span id="info"></span>
+                    <br class="clean"/>
+                    <br class="clean"/>
+                	<a href="" class="btn btn-default" onclick="tourSuivant(); return false" id="btn_suivant">Suivant</a>
+                	<div id="btn_fermer">
+	                	<a href="" class="btn btn-default" onclick="tourSuivant(); return false;">Jouer un autre tour</a>
+                		<a href="" class="btn btn-default" onclick="$('#modal_de').modal('toggle'); $('body').removeClass('modal-de-open'); return false" >Fermer</a>
+                	</div>
+                	<br class="clean"/>
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal fade" id="modal_sauvegarde" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1><i class="fa fa-floppy-o"></i><br/>Sauvegarder le partie</h1>
+                </div>
+                <div class="modal-body" style="text-align: center;">
+                	<br class="clean"/>
+                    <a href="" class="btn btn-default" onclick="sauvegarder(0); return false">Sauvegarder et continuer</a>
+                    <br class="clean"/>
+                    <a href="" class="btn btn-default" onclick="sauvegarder(1); return false">Sauvegarder et quitter</a>
+				</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal fade" id="modal_fini" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1><i class="fa fa-trophy"></i><br/>Fin de la partie</h1>
+                </div>
+                <div class="modal-body" style="text-align: center;">
+                	<div></div>
+                	<br class="clean"/>
+                	<span></span>
+                	<br class="clean"/><br/>
+                	<a href="../PHP/compte.php" class="btn btn-default">Quitter</a>
+				</div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                	<div class="col-xs-12">
+                		<a style="margin-bottom: 10px;" href="#" class="btn btn-default" data-toggle="modal" data-target="#modal_sauvegarde" onclick="return false;">Sauvegarder la partie</a>
+                		<br class="clean"/>
+                		<a style="margin-bottom: 10px;" href="" class="btn btn-default" onclick="tourSuivant(); return false;">Jouer un tour</a>
+                    </div>
+                    <div class="col-xs-6 col-xs-offset-3">
+                        <div class="table-responsive">
+                            <table class="table little plateau">
+                                <tr>
+                                    <td colspan="2" rowspan="2">
+                                        <div class="depart bleu" id="DB">IT START</div>
+                                    </td>
+                                    <td>
+                                        <div class="case bleu" id="B5"></div>
+                                    </td>
+                                    <td>
+                                        <div class="case jaune" id="J0"></div>
+                                    </td>
+                                    <td>
+                                        <div class="case jaune" id="J1"><i class="fa fa-reply"></i></div>
+                                    </td>
+                                    <td colspan="2" rowspan="2">
+                                        <div class="depart jaune" id="DJ">CDPN</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="case bleu" id="B4"></div>
+                                    </td>
+                                    <td>
+                                        <div class="case jaune num" id="NJ1">1</div>
+                                    </td>
+                                    <td>
+                                        <div class="case jaune" id="J2"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="case bleu" id="B1"><i class="fa fa-reply"></i></div>
+                                    </td>
+                                    <td>
+                                        <div class="case bleu" id="B2"></div>
+                                    </td>
+                                    <td>
+                                        <div class="case bleu" id="B3"></div>
+                                    </td>
+                                    <td>
+                                        <div class="case jaune num" id="NJ2">2</div>
+                                    </td>
+                                    <td>
+                                        <div class="case jaune" id="J3"></div>
+                                    </td>
+                                    <td>
+                                        <div class="case jaune" id="J4"></div>
+                                    </td>
+                                    <td>
+                                        <div class="case jaune" id="J5"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="case bleu" id="B0"></div>
+                                    </td>
+                                    <td>
+                                        <div class="case bleu num" id="NB1">1</div>
+                                    </td>
+                                    <td>
+                                        <div class="case bleu num" id="NB2">2</div>
+                                    </td>
+                                    <td>
+                                        <div class="case arrivee num"><i class="fa fa-trophy"></i></div>
+                                    </td>
+                                    <td>
+                                        <div class="case vert num" id="NV2">2</div>
+                                    </td>
+                                    <td>
+                                        <div class="case vert num" id="NV1">1</div>
+                                    </td>
+                                    <td>
+                                        <div class="case vert" id="V0"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="case rouge" id="R5"></div>
+                                    </td>
+                                    <td>
+                                        <div class="case rouge" id="R4"></div>
+                                    </td>
+                                    <td>
+                                        <div class="case rouge" id="R3"></div>
+                                    </td>
+                                    <td>
+                                        <div class="case rouge num" id="NR2">2</div>
+                                    </td>
+                                    <td>
+                                        <div class="case vert" id="V3"></div>
+                                    </td>
+                                    <td>
+                                        <div class="case vert" id="V2"></div>
+                                    </td>
+                                    <td>
+                                        <div class="case vert" id="V1"><i class="fa fa-reply"></i></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" rowspan="2">
+                                        <div class="depart rouge" id="DR" style="font-size: 15px;">CHEF DE PROJET NUMERIQUE</div>
+                                    </td>
+                                    <td>
+                                        <div class="case rouge" id="R2"></div>
+                                    </td>
+                                    <td>
+                                        <div class="case rouge num" id="NR1">1</div>
+                                    </td>
+                                    <td>
+                                        <div class="case vert" id="V4"></div>
+                                    </td>
+                                    <td colspan="2" rowspan="2">
+                                        <div class="depart vert" id="DV">RISR</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="case rouge" id="R1"><i class="fa fa-reply"></i></div>
+                                    </td>
+                                    <td>
+                                        <div class="case rouge" id="R0"></div>
+                                    </td>
+                                    <td>
+                                        <div class="case vert" id="V5"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

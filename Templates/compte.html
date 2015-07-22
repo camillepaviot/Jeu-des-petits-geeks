@@ -1,0 +1,81 @@
+		<div id="content">
+            <div class="container">
+            	<!-- BEGIN connect -->
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2">
+						<h1>Bienvenue sur votre espace client</h1>
+						<a href="../PHP/profil.php" class="btn btn-default btn-compte"><i class="fa fa-user"></i> Mon profil</a><br>
+						<a href="../PHP/parties.php" class="btn btn-default btn-compte"><i class="fa fa-floppy-o"></i> Mes parties</a><br>
+						<a href="../PHP/compte.php?action=deconnexion" class="btn btn-default btn-compte"><i class="fa fa-power-off"></i> Déconnexion</a>
+					</div>
+                </div>
+                <!-- END connect -->
+                
+                <!-- BEGIN erreur -->
+                
+	           	<!-- BEGIN no_exist -->
+	           	<div class="alert alert-danger" role="alert">
+	                Erreur d'identification, 
+	                le mot de passe et l'adresse mail sont inccorects
+	            </div>
+	            <!-- END no_exist -->
+	            <!-- BEGIN exist -->
+	           	<div class="alert alert-danger" role="alert">
+	                Erreur de création de compte,
+	                cette adresse mail est déjà utilisé par un compte
+	            </div>
+	            <!-- END exist -->
+                
+                <div class="row">
+                	<div class="col-xs-6">
+                		<h2>Se connecter</h2>
+	                	<form action="../PHP/compte.php" method="post">
+		                    <div class="form-group">
+		                        <label for="user_mail">Identifiant</label>
+		                        <input type="email" class="form-control" name="user_mail" placeholder="Entrez votre adresse email" required/>
+		                    </div>
+		                    <div class="form-group">
+		                        <label for="user_mdp">Mot de passe</label>
+		                        <input type="password" class="form-control" name="user_mdp" placeholder="Entrez votre mot de passe" required/>
+		                    </div>
+		                    <button id="btn_connexion" type="submit" class="btn btn-default">S'identifier</button>
+		                </form>
+		        	</div>
+		        	<div class="col-xs-6">
+		        		<h2>Créer un compte</h2>
+	                	<form action="../PHP/compte.php?action=creation" method="post" id="form_create">
+			                <div class="form-group">
+				            	<label for="user_nom">Nom *</label>
+				                <input type="text" class="form-control" name="user_nom" placeholder="Entrez votre nom" required/>
+				            </div>
+				            <div class="form-group">
+				                <label for="user_prenom">Prénom *</label>
+				                <input type="text" class="form-control" name="user_prenom" placeholder="Entrez votre prénom" required/>
+				            </div>
+				            <div class="form-group">
+				                <label for="user_pseudo">Pseudo</label>
+				                <input type="text" class="form-control" name="user_pseudo" placeholder="Entrez votre pseudo" />
+				            </div>
+				            <div class="form-group">
+				                 <label for="user_mail">Adresse mail *</label>
+				                 <input type="email" class="form-control" name="user_mail" placeholder="Entrez votre adresse email" required/>
+				            </div>
+				            <div class="form-group">
+				                 <label for="user_mdp">Mot de passe *</label>
+				                 <input type="password" class="form-control" name="user_mdp" placeholder="Entrez votre mot de passe" required/>
+				            </div>
+				            <div class="form-group" id="user_couleur">
+				            	 <label for="user_couleur">Couleur *</label><br/>
+				            	 <!-- BEGIN couleur -->
+				                 <input type="radio" name="user_couleur" value="{couleur.couleur_id}" id="couleur_{couleur.couleur_id}" required/>
+				                 <div class="compte_couleur" style="background-color: {couleur.couleur_hexa}" onclick="$('#couleur_{couleur.couleur_id}').prop('checked', true);"></div>
+				            	 <!-- END couleur -->
+				            </div>
+				            <br class="clean"/>
+				            <button id="btn_connexion" type="submit" class="btn btn-default">Créer compte</button>
+			        	</form>
+		        	</div>
+	            </div>
+                <!-- END erreur -->
+            </div>
+        </div>

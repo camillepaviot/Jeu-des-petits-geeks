@@ -1,0 +1,62 @@
+        <div id="content">
+            <div class="container">
+            	<!-- BEGIN succes -->
+            	<div class="alert alert-success" role="alert">
+	                Modifications enregistrées
+	            </div>
+	            <!-- END succes -->
+            	<!-- BEGIN erreur -->
+            	<div class="alert alert-danger" role="alert">
+	                Erreur de modification de mot de passe. 
+	                Le mot de passe saisie dans "Mot de passe actuel" n'est pas correcte.
+	            </div>
+	            <!-- END erreur -->
+                <form action="../PHP/profil.php" method="post" id="form_create">
+	                <div class="row">
+	                    <div class="col-xs-12">
+	                    	<div class="form-group">
+		                        <label for="user_nom">Nom *</label>
+		                        <input type="text" class="form-control" name="user_nom" placeholder="Entrez votre nom" value="{user_nom}" required/>
+		                    </div>
+		                    <div class="form-group">
+		                        <label for="user_prenom">Prénom *</label>
+		                        <input type="text" class="form-control" name="user_prenom" placeholder="Entrez votre prénom" value="{user_prenom}" required/>
+		                    </div>
+		                    <div class="form-group">
+		                        <label for="user_pseudo">Pseudo</label>
+		                        <input type="text" class="form-control" name="user_pseudo" placeholder="Entrez votre prénom" value="{user_pseudo}"/>
+		                    </div>
+		                    <div class="form-group">
+		                        <label for="user_mail">Adresse mail *</label>
+		                        <input type="email" class="form-control" name="user_mail" placeholder="Entrez votre adresse email" value="{user_mail}" required/>
+		                    </div>
+		                    <div class="form-group" id="user_couleur">
+				            	 <label for="user_couleur">Couleur *</label><br/>
+				            	 <!-- BEGIN couleur -->
+				                 <input type="radio" name="user_couleur" value="{couleur.couleur_id}" id="couleur_{couleur.couleur_id}" {couleur.checked} required/>
+				                 <div class="compte_couleur" style="background-color: {couleur.couleur_hexa}" onclick="$('#couleur_{couleur.couleur_id}').prop('checked', true);"></div>
+				            	 <!-- END couleur -->
+				            </div>
+				            <br class="clean"/>
+		                    <label><small>Ne remplir que si vous souhaitez modifier votre mot de passe</small></label>
+		                    <div class="form-group">
+		                        <label for="user_old_mdp">Mot de passe actuel</label>
+		                        <input type="password" class="form-control" name="user_old_mdp" placeholder="Entrez votre mot de passe" />
+		                    </div>
+		                    <div class="form-group">
+		                        <label for="user_mdp1">Nouveau mot de passe</label>
+		                        <input type="password" class="form-control" name="user_mdp1" placeholder="Entrez votre mot de passe" />
+		                    </div>
+		                    <div class="form-group">
+		                        <label for="user_mdp2">confirmer le nouveau mot de passe</label>
+		                        <input type="password" class="form-control" name="user_mdp2" placeholder="Entrez votre mot de passe" />
+		                    </div>
+		                </div>
+		                <div class="col-xs-12">
+		                    <button type="submit" class="btn btn-default">Modifier</button>
+						</div>
+	                </div>
+	        	</form>
+            </div>
+        </div>
+
