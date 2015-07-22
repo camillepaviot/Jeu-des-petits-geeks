@@ -43,7 +43,7 @@ if(isset($_SESSION['user']) && $_SESSION['user']!=""){
 		else if($result['partie_etat']==2){
 			$score='perdu';
 			if($result['geek_score']=='10'){
-				$score='gagn�';
+				$score='gagné';
 				$partie_gagnee++;
 			}
 			$template->assign_block_vars('parties.fini', array('score'=>$score));
@@ -54,7 +54,7 @@ if(isset($_SESSION['user']) && $_SESSION['user']!=""){
 	}
 	
 	if($partie_finie!=0){
-		$pourcent=number_format((100*$partie_gagnee)/$partie_finie, 2);
+		$pourcent=number_format((100*$partie_gagnee)/$partie_finie, 0);
 	}
 	
 	$template->assign_vars(array(

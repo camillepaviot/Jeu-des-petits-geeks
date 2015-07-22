@@ -26,8 +26,8 @@ $query = mysqli_query($db, $sql) or exit(mysqli_error($db));
 	
 while($result = mysqli_fetch_assoc($query))
 {
-	$result['user_nb_gagne']=number_format($result['user_score']/10,2);
-	$result['user_pourcent']=($result['user_score']*10)/$result['user_nb_partie'];
+	$result['user_nb_gagne']=$result['user_score']/10;
+	$result['user_pourcent']=number_format(($result['user_score']*10)/$result['user_nb_partie'],0);
 	if(!isset($result['user_pseudo']) || $result['user_pseudo']==''){
 		$result['user_pseudo']=$result['user_prenom'].' '.$result['user_nom'];
 	}
